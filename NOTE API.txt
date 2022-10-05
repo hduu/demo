@@ -1,0 +1,41 @@
+tổng quan web api 
+api : application programing interface 
+api la phương thức để kết nối,trao đổi dữ liệu những thư viên hay ứng dụng với nhau 
+api chỉ là các hàm thủ tục thông thường 
+   RESTfull api : 
+      API 
+	  REST quy định các sử dụng HTTP method (get,post,put,delete..)
+	  RESTful API là 1 tiêu chuẩn dùng trong việc thiết kế các API cho các ứng dụng web để quản lý các resource 
+Web API là hệ thống api trên nền tảng web truy cập bằng http 
+asp.net web api là 1 framework dùng để xây dựng và lập trình các dịch vự web http , dạng RESTful API hiện dại 
+http request 3 phân :
+Request-line : phương thức + url-request + phien bản http
+     GET/doc/test.html HTTP/1.0
+Cac truong header 
+1 dòng trống để đánh dấu sự kết thúc của các trường header
+thông điệp 
+1 sô http method : get,post,put,delete 
+cấu trúc http response bao gồm : 
+ 1 status-line = phiên bản http + status code + trạng thái 
+ 2 có thể có or ko trường header
+ 3 trương trống để đánh dấu sự kết thúc 
+ 4 một thông điệp 
+====cap nhat database : 
+public void update(hocsinh hs,int id)
+{
+   var check = dbcontext.hocsinhs.find(id);
+   if(check == null) console.writeline("khong ton tai");
+   else 
+     check.hoten = hs.hoten 
+	 ....
+	 dbcontext.hocsinhs.update(check);
+	 savechange(); 
+}
+[HttpGet] lay ra data
+[httpPost] tao ra 1 du lieu
+[httpPush] update 1 du lieu 
+[httpDelete] xoa 1 du lieu 
+[FromBody]
+[FromForm]
+[FromHeader]
+[FromQuery]
